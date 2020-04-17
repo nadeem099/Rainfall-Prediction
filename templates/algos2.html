@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+    <meta charset="UTF-8">
+    <title>RFP</title>
+    <link rel="shortcut icon" type="ico" href="favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Krub|ABeeZee|Comfortaa|Andika');
+        @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+
+          html {
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-tap-highlight-color: transparent;
+            min-height: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background: -webkit-linear-gradient(to top,#535B61, #000509);
+            background: linear-gradient(to top,#535B61, #000509);
+            background-repeat:no-repeat;
+            background: -webkit-linear-gradient( to top,#535B61, #000509);
+            background: -moz-linear-gradient( to top,#535B61, #000509);
+            background: -ms-linear-gradient( to top,#535B61, #000509);
+            background: -o-linear-gradient( to top,#535B61, #000509);
+            background: linear-gradient( to top,#535B61, #000509);
+        }
+
+
+        /*sdfghjkl;*/
+
+
+        body {
+            /*background-attachment: fixed;*/
+            margin : 0px;
+            height : 100%;
+
+            /*background-color: #232840;*/
+            /*background: #000428;  !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to right,#004e92, #000428);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right,#004e92, #000428); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*background: #F0F2F0;  !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient( #000C40, #F0F2F0);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient( #000C40, #F0F2F0); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*background: #9CECFB;  !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*background: #4CA1AF;  !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #C4E0E5, #4CA1AF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+        #Header {
+
+            margin-top: 50px;
+            text-align: center;
+            font-size: 60px;
+            color: rgba(250,250,250,1);
+
+
+
+
+            font-family: 'Comfortaa', cursive;
+            /*margin-top: 0px;*/
+            /*text-align: center;*/
+            font-size: 60px;
+            color: rgba(250,250,250,1);
+            cursor: pointer;
+            /*padding-top: 5px;*/
+            /*text-align: center;*/
+            /*float: right;*/
+
+            /*margin-right: 41%;*/
+            margin-bottom: 5%;
+            text-align: center;
+            /*padding-top: 5px;
+            /*padding-bottom: 5px;*/
+            /*background: #00c4cc linear-gradient(139deg, #00c4cc 0, #7d2ae8 100%);*/
+            /*background-color: red;*/
+        }
+        /*#Header {*/
+        /*margin-top: 50px;*/
+        /*text-align: center;*/
+        /*font-size: 30px;*/
+        /*color: rgba(250,250,250,1);*/
+        /*font-family: 'Comfortaa', cursive;*/
+        /*cursor: pointer;*/
+        /*!*background: #00c4cc linear-gradient(139deg, #00c4cc 0, #7d2ae8 100%);*!*/
+        /*}*/
+        #box {
+            width:50%;
+            height:50%;
+            margin:0 auto;
+            padding-top: 0;
+            border-radius: 100px;
+            text-align: center;
+        }
+        button {
+            padding-top:0;
+            background:#ADAAA9; /*#004e92;*/
+            outline: none;
+            border: 0px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            height:100%;
+        }
+        #address {
+            font-family: 'ABeeZee', sans-serif;
+            font-size: 30px;
+        }
+        .temp {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            font-size: 85px;
+            cursor: pointer;
+        }
+        #deg {
+            font-size: 40px;
+        }
+        #status {
+            font-size : 25px;
+            text-align: center;
+            display: inline-block;
+            margin: 40px 200px 20px 200px;
+        }
+        /*h1 {*/
+        /*margin-top : 0;*/
+        /*}*/
+        #error {
+            font-size: 25px;
+        }
+
+        #humidity {
+            margin: 40px 200px 20px 0;
+            font-size : 25px;
+            float: right;
+            text-align: center;
+            display: inline-block;
+        }
+        #pressure {
+            margin: 40px 0  20px 200px;
+            float:left;
+            font-size : 25px;
+            text-align: center;
+            display: inline-block;
+        }
+        #pressure, #humidity, #status {
+            z-index: 1;
+            background:  #ADAAA9;  /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            margin: 10% auto ;
+            /*margin: 10px;*/
+        }
+        #predict_content {
+            font-size: 20px;
+            margin: 20px 0  30px 0;
+        }
+
+        #status.fadeIn {
+            /*animation-duration: 2s;*/
+            animation-delay: 0.5s;
+        }
+
+
+        #LR {
+
+            font-size: 20px;
+            margin: 40px 30px 20px 40px;
+            float:center;
+            /*border-radius: 45% ;*/
+            background:   #ADAAA9; /* #402534 #3A2230;  /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 15px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            /*margin: 10% auto ;*/
+            /*margin: 10px;*/
+        }
+        #MLR {
+
+            font-size: 20px;
+            margin: 40px 40px  20px 30px;
+            float:center;
+            /*border-radius: 45% ;*/
+            background:   #ADAAA9; /* #402534 #3A2230;  /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 15px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            /*margin: 10% auto ;*/
+            /*margin: 10px;*/
+        }
+        #PR {
+            
+            font-size: 20px;
+            margin: 40px 10px  20px 50px;
+            float:center;
+            /*border-radius: 45% ;*/
+            background:   #ADAAA9; /* #402534 #3A2230;  /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 20px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            /*margin: 10% auto ;*/
+            /*margin: 10px;*/
+        }
+        #LogR {
+
+            font-size: 20px;
+            margin: 40px 0  20px 50px;
+            float:right;
+            /*border-radius: 45% ;*/
+            background:   #ADAAA9; /* #402534 #3A2230;  /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 20px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            /*margin: 10% auto ;*/
+            /*margin: 10px;*/
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("body").delay("slow").fadeIn();
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        var app=angular.module("app",[]);
+        app.controller("emp",['$scope',function($scope){
+            $scope.iconi='clear-night';
+            $scope.tempF = '85';
+            $scope.tempC = '29';
+            $scope.predict = "Humid throughout the day.";
+            $scope.count = 1;
+            $scope.bool = 'true';
+            $scope.display = function () {
+                $scope.count++;
+                if($scope.count%2==0){
+                    $scope.bool='false';
+                }
+                else {
+                    $scope.bool = 'true';
+                }
+            };
+            $scope.error = '';
+            $scope.wind = '10.7';
+            $scope.humidity = '73';
+            $scope.summary = 'Humid';
+            $scope.url = '%20Mumbai%20MAHARASHTRA%20IN';
+        }]);
+    </script>
+</head>
+
+
+
+<body>
+
+<form action="/">
+    <!--<span id="logo"><img src="logo.svg" style="margin-top: 23px;margin-left: 50px;width:80px;height: 80px"></span>-->
+
+    <img id="logo" src="https://weather-io.herokuapp.com/rain.svg" class="animated fadeIn" height="70px" width="70px" style="float: left !important; position: absolute;margin: 3% 0 0 3%;">
+
+
+
+    <button style=" background: transparent !important" type="submit"><p id="Header" class="animated fadeIn" style="padding: 1%; text-align: center; position: relative; margin-top: 3%"><b>RainFall Predictor</b></p></button>
+
+</form>
+
+<div ng-app="app" class="ng-scope">
+    <div ng-controller="emp" class="ng-scope">
+
+        <div id="box" style="width: 90%; margin-top: 4%;">
+            <div id="table">
+                <p id="address" style="padding-bottom: 2px;" class="animated fadeIn"> {{city}} </p>
+                <p id="address" style="padding-bottom: 2px;" class="animated fadeIn"> {{country_code}} </p>
+                
+                                                                                                                                                        
+                <!-- ngIf: bool=='true' --><span ng-click="display()" ng-if="bool=='true'" class="ng-scope"><p class=" temp animated fadeIn">{{temperature}}<span><!-- ngIf: tempC!="" --><sup ng-if="tempC!=&quot;&quot;" id="deg" class="ng-scope">°F</sup><!-- end ngIf: tempC!="" --></span></p></span><!-- end ngIf: bool=='true' -->
+                <!-- ngIf: bool=='false' -->
+            </div>
+
+            <!-- ngIf: summary.length>0 --><div id="status" class="animated fadeIn ng-scope" style="width: 29%;" ng-if="summary.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%;font-family: 'Andika', sans-serif"><b>Humidity</b></p>
+                <!-- ngIf: iconi=='clear-day' -->
+                <!-- ngIf: iconi=='clear-night' --><img src="https://weather-io.herokuapp.com/wind.svg" style="width:120px;height:120px;" class="animated fadeIn ng-scope" ng-if="iconi=='clear-night'"><!-- end ngIf: iconi=='clear-night' -->
+                <!-- ngIf: iconi=='cloudy' -->
+                <!-- ngIf: iconi=='fog' -->
+                <!-- ngIf: iconi=='hail' -->
+                <!-- ngIf: iconi=='partly-cloudy-day' -->
+                <!-- ngIf: iconi=='partly-cloudy-night' -->
+                <!-- ngIf: iconi=='rain' -->
+                <!-- ngIf: iconi==='sleet' -->
+                <!-- ngIf: iconi==='snow' -->
+                <!-- ngIf: iconi==='thunderstorm' -->
+                <!-- ngIf: iconi==='tornado' -->
+                <!-- ngIf: iconi==='wind' -->
+                <p class="animated fadeIn" style="font-size: 85%;">{{humidity}}%</p>
+            </div><!-- end ngIf: summary.length>0 -->
+            <!-- ngIf: humidity!='' --><div id="humidity" class="animated fadeInRight ng-scope" style="margin-right: 10%;" ng-if="humidity!=''">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%;font-family: 'Andika', sans-serif"><b>Pressure</b></p>
+                <p><b><b></p>
+                <div class="animated fadeIn"><img src="https://weather-io.herokuapp.com/humidity.svg" style="width:120px;height:120px;"></div>
+                <p class="animated fadeIn" style="font-size: 85%;">{{pressure}} mbar</p>
+            </div><!-- end ngIf: humidity!='' -->
+            <!-- ngIf: wind!='' --><div id="pressure" style="margin-left: 10%;" class="animated fadeInLeft ng-scope" ng-if="wind!=''">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif"><b>Wind Speed</b></p>
+                <div class="animated fadeIn"><img src="https://weather-io.herokuapp.com/partly-cloudy-day.svg" style="width:120px;height:120px;"></div>
+                <p class="animated fadeIn" style="font-size: 85%;">{{wind_speed}} m/s</p>
+            </div><!-- end ngIf: wind!='' -->
+                   <p class="animated fadeIn" style="font-size: 35px;padding-left:40px; margin-top: 0px; font-family: 'Andika', sans-serif "><b>Forecast</b>
+               
+           <!-- ngIf: predict.length>0 --><div id="LR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif"><b>Linear Regression</b><br></p>
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 3.05</b></p>
+               <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text1}} Inches</b></p>
+            <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt1}}</b></p>
+               
+                  
+           </div><!-- end ngIf: predict.length>0 -->
+          
+            <div id="MLR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Multiple Linear Regression</b><br></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Datenreihe1LinGrafikViel.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 3.02</b></p>
+               <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text2}} Inches</b></P>
+                <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt2}}</b></p>
+
+                
+           </div>
+           <div id="LR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+               <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Polynomial Regression</b><br></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Heightmass-poly-wh.svg" style="width:120px;height:120px;">
+               <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 2.62</b></p>
+               <p class="animated fadeIn" style="font-size: 85%; "><b>{{prediction_text3}} Inches</b></P>
+                <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt3}}</b></p>
+
+           </div>
+           <div id="MLR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Logistic Regression</b><br></p>
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>Accuracy: 87%</b></p>  
+              <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text4}}</b></p>
+           </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif;margin-top: 15%; margin-bottom: 30px; color: white; text-decoration: none;">
+    <h3>Created </h3>
+    <p style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;"> by </p>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/nadeem-choudhary-a0b091180"><u>Nadeem chaudhary</a><br></u>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/manoharj123"><u>Manohar jaiswar</a><br></u>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/ganesh-jha-144089115"><u>Ganesh Jha</a><br></u>
+</div>
+
+
+</body></html>
