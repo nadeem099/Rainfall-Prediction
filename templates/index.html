@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>RainFall</title>
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Krub|ABeeZee|Comfortaa|Gudea|Amaranth');
+        @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
+        * {
+            box-sizing: border-box;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: #fff;
+        }
+
+
+
+
+
+         html {
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-tap-highlight-color: transparent;
+            min-height: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background: -webkit-linear-gradient(to top,#535B61, #000509);
+            background: linear-gradient(to top,#535B61, #000509);
+            background-repeat:no-repeat;
+            background: -webkit-linear-gradient( to top,#535B61, #000509);
+            background: -moz-linear-gradient( to top,#535B61, #000509);
+            background: -ms-linear-gradient( to top,#535B61, #000509);
+            background: -o-linear-gradient( to top,#535B61, #000509);
+            background: linear-gradient( to top,#535B61, #000509);
+        }
+
+
+
+
+        /*sdfghjkl;*/
+
+
+
+
+
+
+        h1 {
+            display: inline;
+        }
+
+        body {
+            position: relative;
+            background-attachment: fixed;
+            margin: 0;
+
+
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+        #namer {
+            position: relative;
+            width: 400px;
+            margin: 149px auto 0;
+        }
+        #namer input {
+            border: 0px;
+            border-bottom: 2px solid #ADAAA9;
+            width: 55%;
+            /*float: right;*/
+            font-size: 30px;
+            line-height: 35px;
+            height: 70px;
+            text-align: center;
+            padding-right: 10px;
+            background: transparent;
+            color: #fff;
+            font-family: 'ABeeZee',sans-serif;
+
+        }
+        #namer input:focus {
+            outline: 0;
+            color: #fff;
+        }
+        #namer input::-webkit-input-placeholder {
+            color: #fff;
+        }
+        #namer input:-ms-input-placeholder {
+            color: #fff;
+        }
+        #namer input::-ms-input-placeholder {
+            color: #fff;
+        }
+        #namer input::placeholder {
+            color: #fff;
+        }
+        .namer-controls {
+            position: relative;
+            display: block;
+            height: 30px;
+            margin: 20px 0;
+            text-align: center;
+            opacity: 1;
+            cursor: pointer;
+
+        }
+        .namer-controls div {
+            float: left;
+            width: 50%;
+
+        }
+        button {
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            background:#ADAAA9; /*#004e92;*/
+            padding: 15px 40px;
+            width:170px;
+            display: inline-block;
+            border-radius: 30px;
+            margin-top: 7px;
+            /*background-color: transparent;*/
+            outline: none;
+            border: 0px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .namer-controls div span:last-child {
+            margin-right: 0;
+        }
+        #box {
+            width:50%;
+            height:50%;
+            margin: 0 auto;
+            border-radius: 100px;
+        }
+        #Header {
+            font-family: 'Comfortaa', cursive;
+            /*margin-top: 0px;*/
+            /*text-align: center;*/
+            font-size: 60px;
+            color: rgba(250,250,250,1);
+            cursor: pointer;
+            /*padding-top: 5px;*/
+            /*text-align: center;*/
+            /*float: right;*/
+
+            /*margin-right: 41%;*/
+            margin-bottom: 10%;
+            text-align: center;
+            /*padding-top: 5px;
+            /*padding-bottom: 5px;*/
+            /*background: #00c4cc linear-gradient(139deg, #00c4cc 0, #7d2ae8 100%);*/
+            /*background-color: red;*/
+        }
+        #one {
+            /*margin-left: 80px;*/
+            float: center;
+            display: inline-block;
+            margin-top: 10%;
+
+        }
+        #two {
+            /*margin-left: 80px;*/
+            display: inline-block;
+            float: right;
+            margin-top: 15%;
+        }
+        /*.hide {*/
+        /*visibility: hidden;*/
+        /*}*/
+        #form {
+
+            margin-right: 400px;
+            text-align: center;
+            width : 600px;
+            /*padding-left: 100px;*/
+        }
+        #this {
+            float: right;
+        }
+        #back {
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            display: inline-block;
+            /*margin-top: 7px;*/
+            /*height: ;*/
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            /*font-size: 20px;*/
+            /*text-transform: uppercase;*/
+            /*letter-spacing: 0.3px;*/
+            margin-top: 18px;
+            background-color: transparent;
+            outline: none;
+            border: 0px;
+            color: #fff;
+            /*font-size: 20px;*/
+            cursor: pointer;
+            float: left;
+            /*padding: 20px 50px;*/
+            /*width: 100%;*/
+            /*height:100%;*/
+        }
+
+        /*#logo {*/
+        /*margin-top: 100px;*/
+        /*display:none;*/
+        /*}*/
+
+        #predict_fore {
+
+            font-size: 20px;
+            /*margin: 800px 0  20px 0;*/
+            /*border-radius: 45% ;*/
+            background: #ADAAA9; /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+            /*position: relative;*/
+            display: inline-block;
+            border-radius: 20px;
+            width: 100%;
+            padding: 23px;
+            height: 50%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            /*padding: 20px 38px 100px 38px;*/
+            /*margin: 10% auto ;*/
+            /*margin: 10px;*/
+        }
+
+        #predict_fore.fadeIn {
+            /*animation-duration: 2s;*/
+            animation-delay: 0.5s;
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        function secondClick() {
+            setTimeout(function(){
+                document.getElementById("secondClick").click(); }, 0);
+
+        }
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x = position.coords.latitude;
+            y = position.coords.longitude;
+            var a = document.getElementById("input_lat");
+            a.value = x;
+            var b = document.getElementById("input_lng");
+            b.value = y;
+            secondClick();
+        }
+
+        $(document).ready(function(){
+            $("#back").css(
+                    "display" , "none"
+            );
+            $("#namer-input").css(
+                    "display" , "none"
+            );
+            $("#this").css(
+                    "display" , "none"
+            );
+            $("body").fadeIn("slow");
+            $("#one").fadeIn("slow");
+            $("#two").fadeIn("slow");
+            $("#start").fadeIn("slow");
+            $("#last").fadeIn("slow");
+            $("#logo").fadeIn("slow");
+            $("#Header").fadeIn("slow");
+
+
+
+
+
+            $("#one").click(function(e){
+                e.preventDefault();
+                $("#one").css(
+                        "display" , "none"
+                );
+
+                $("#two").css(
+                        "display" , "none"
+                );
+                $("#namer-input").css(
+                        "display" , "block"
+                );
+                $("#this").css(
+                        "display" , "block"
+                );
+                $("#back").css(
+                        "display" , "block"
+                );
+
+
+            });
+
+            $("#back").click(function(){
+
+                $("#namer-input").css(
+                        "display" , "none"
+                );
+                $("#this").css(
+                        "display" , "none"
+                );
+                $("#back").css(
+                        "display" , "none"
+                );
+
+
+                $("#one").css(
+                        "display" , "block"
+                );
+
+                $("#two").css(
+                        "display" , "block"
+                );
+
+
+
+            })
+
+        });
+    </script>
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="emp" style="display: inline;">
+
+
+
+        <img id="logo" src="https://weather-io.herokuapp.com/rain.svg" class="animated fadeIn" height="70px" width="70px" style=" float: left !important; position: absolute;margin: 0 0 0 3%; ">
+
+
+
+        <p id="Header" class="animated fadeIn" style="padding: 1%; text-align: center; position: relative; margin-top: 3%"><b>RainFall Predictor</b></p>
+
+
+        <div id="box" style="text-align: center;margin-top: 10%">
+            <div id="namer" style="text-align: center;">
+                <div id="main" style="text-align: center;">
+                    <div class="namer-controls" style="text-align: center;" >
+
+                        <form id="form" method="POST" action="{{url_for('algos')}}" style="text-align: center;">
+                    <span id="namer-input" class="hide" style="text-align: center;">
+            <input type="text" class="animated flipInX" name="location" placeholder="Search for your city.." style="margin-left:-70%;position: absolute;width:300px;margin-top: 10%">
+                    </span>
+
+                           <button class="hide animated flipInX" id="this" type="submit" style="margin-left:-45%;margin-right: 10%;margin-top: 10%"><a href="{{url_for('algos')}}"> <img src="https://weather-io.herokuapp.com/search.svg" width="26px" height="26px"></a></button>
+                            <button type="button" class="animated flipInX" id="back" style=" padding: 0px; display:none;margin-left:-10%;margin-top: 10% "><span > <img width="48px" height="48px" src="https://weather-io.herokuapp.com/back.svg"></span></button>
+
+                        </form>
+                         
+                        
+                        <button id="one" class="animated fadeInLeft" type="button" style="display:none;text-align: center; width:400px;"> <img src="https://weather-io.herokuapp.com/search.svg" width="32px" height="32px"></a></button>
+
+                            </div>
+                          </div>
+                         </div>
+
+                  
+                    <!--     <p style="font-family: 'ABeeZee', sans-serif; font-size: 22px; text-align: center; margin-top: 190px;">Tap GO to get the weather of current location or search for any place around the world</p> -->
+
+          
+            <!--<div style="margin-top: 50px;padding-top: 200px;">-->
+            <!--<p style="text-align: center;font-size: 25px; font-family: 'Comfortaa', cursive">Wishing you all a very</p>-->
+            <!--<p style="text-align: center;font-size: 35px; font-family: 'Comfortaa', cursive;padding-top: 10px;">🤗 Happy Diwali 🤗</p>-->
+
+            <!--</div>-->
+            <div id="predict_fore" style="margin : 350px auto; text-align:center; " class="animated fadeIn" >
+                <!--<img src="logo.svg" class="animated fadeIn" style="width:150px;float:left;height:150px; margin-top: 4px; margin-right: 45px; " >-->
+                <p class="animated fadeIn" style="font-size: 42px;margin-top: 0px;font-family: 'Amaranth', sans-serif; "><b>About</b></p>
+                <p style="font-size: 27.5px; margin-top: 10px; text-align: justify; line-height: 1.2; font-family: 'Gudea', sans-serif;">This Rainfall Predictor web app gives you details about rainfall conditions at your current location or at any place around the world.
+                    It uses differnt machine learning algorithms to predict the real time precipitation and gives you the details of weather of the day.</p>
+                    <p style="padding-top: 5px; text-align: justify; font-family: 'Gudea', sans-serif; font-size: 27.5px;"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="last" style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif;margin-top: 10%;margin-bottom: 30px;  color: white; text-decoration: none;display: none;">
+
+    <h3>Created</h3>
+    <p style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;"> by </p>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/nadeem-choudhary-a0b091180"><u>Nadeem Choudhary</a></u><br>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/manoharj123"><u>Manohar Jaiswar</a></u><br>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/ganesh-jha-144089115"><u>Ganesh Jha</a></u>
+</div>
+<form action='/locate' style="display:none;">
+    <input type="text" name='name_lat' id="input_lat">
+    <input type="text" name='name_lng' id="input_lng">
+    <button type="submit" id="secondClick"></button>
+</form>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</body>
+</html>
