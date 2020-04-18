@@ -123,7 +123,7 @@ def algos():
     prediction1 = modelLR.predict(sample2)
     prediction1 = prediction1[0][0]
     prediction1 = math.floor(prediction1)
-    if (prediction1 < 0):
+    if (prediction1 <2):
         prediction1 = 0
     #condition of weather:
     if(prediction1 < 2):
@@ -139,7 +139,7 @@ def algos():
     prediction2 = modelMLR.predict(sample)
     prediction2 =  prediction2[0][0]
     prediction2 = math.floor(prediction2)
-    if (prediction2 < 0):
+    if (prediction2 < 2):
         prediction2 = 0
     #condition of weather:
     if(prediction2 < 2):
@@ -157,7 +157,7 @@ def algos():
     prediction3 = modelPR.predict(sample_poly)
     prediction3 = prediction3[0][0]
     prediction3 = math.floor(prediction3)
-    if (prediction3 < 0):
+    if (prediction3 < 2):
         prediction3 = 0
     #condition of weather:
     if(prediction3 < 2):
