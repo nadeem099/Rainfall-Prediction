@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+    <meta charset="UTF-8">
+    <title>RFP</title>
+    <link rel="shortcut icon" type="ico" href="favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Krub|ABeeZee|Comfortaa|Andika');
+        @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+
+          html {
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-tap-highlight-color: transparent;
+            min-height: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background: -webkit-linear-gradient(to top,#535B61, #000509);
+            background: linear-gradient(to top,#535B61, #000509);
+            background-repeat:no-repeat;
+            background: -webkit-linear-gradient( to top,#535B61, #000509);
+            background: -moz-linear-gradient( to top,#535B61, #000509);
+            background: -ms-linear-gradient( to top,#535B61, #000509);
+            background: -o-linear-gradient( to top,#535B61, #000509);
+            background: linear-gradient( to top,#535B61, #000509);
+        }
+
+
+        /*sdfghjkl;*/
+
+
+        body {
+            margin : 0px;
+            height : 100%;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+        #Header {
+
+            margin-top: 50px;
+            text-align: center;
+            font-size: 60px;
+            color: rgba(250,250,250,1);
+            font-family: 'Comfortaa', cursive;
+            font-size: 60px;
+            color: rgba(250,250,250,1);
+            cursor: pointer;
+            margin-bottom: 5%;
+            text-align: center;
+           
+        }
+      
+        #box {
+            width:50%;
+            height:50%;
+            margin:0 auto;
+            padding-top: 0;
+            border-radius: 100px;
+            text-align: center;
+        }
+        button {
+            padding-top:0;
+            background:#ADAAA9; /*#004e92;*/
+            outline: none;
+            border: 0px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            height:100%;
+        }
+        #address {
+            font-family: 'ABeeZee', sans-serif;
+            font-size: 30px;
+        }
+        .temp {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            font-size: 85px;
+            cursor: pointer;
+        }
+        #deg {
+            font-size: 40px;
+        }
+        #humidity {
+            font-size : 25px;
+            text-align: center;
+            display: inline-block;
+            margin: 40px 200px 20px 200px;
+        }
+    
+
+        #pressure {
+            margin: 40px 200px 20px 0;
+            font-size : 25px;
+            float: right;
+            text-align: center;
+            display: inline-block;
+        }
+        #windspeed {
+            margin: 40px 0  20px 200px;
+            float:left;
+            font-size : 25px;
+            text-align: center;
+            display: inline-block;
+        }
+        #windspeed, #pressure, #humidity {
+            z-index: 1;
+            background:  #ADAAA9;
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            margin: 10% auto ;
+        }
+        #predict_content {
+            font-size: 20px;
+            margin: 20px 0  30px 0;
+        }
+
+        #status.fadeIn {
+            animation-delay: 0.5s;
+        }
+
+
+        #LR {
+
+            font-size: 20px;
+            margin: 40px 30px 20px 40px;
+            float:center;
+            background:   #ADAAA9;
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 15px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        #MLR {
+
+            font-size: 20px;
+            margin: 40px 40px  20px 30px;
+            float:center;
+            background:   #ADAAA9; 
+            display: inline-block;
+            border-radius: 20px;
+            width: 23%;
+            padding: 15px;
+            height: 30%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+       
+
+    </style>
+   
+</head>
+
+
+
+<body>
+
+<form action="/">
+
+    <img id="logo" src="https://weather-io.herokuapp.com/rain.svg" class="animated fadeIn" height="70px" width="70px" style="float: left !important; position: absolute;margin: 3% 0 0 3%;">
+
+
+
+    <button style=" background: transparent !important" type="submit"><p id="Header" class="animated fadeIn" style="padding: 1%; text-align: center; position: relative; margin-top: 3%"><b>RainFall Predictor</b></p></button>
+
+</form>
+
+<div ng-app="app" class="ng-scope">
+    <div ng-controller="emp" class="ng-scope">
+
+        <div id="box" style="width: 90%; margin-top: 4%;">
+            <div id="table">
+                <p id="address" style="padding-bottom: 2px;" class="animated fadeIn"> {{city}} </p>
+                <p id="address" style="padding-bottom: 2px;" class="animated fadeIn"> {{country_code}} </p>
+                
+                                                                                                                                                        
+              <span ng-click="display()" ng-if="bool=='true'" class="ng-scope"><p class=" temp animated fadeIn">{{temperature}}<span><sup ng-if="tempC!=&quot;&quot;" id="deg" class="ng-scope">°F</sup></span></p></span>
+              
+            </div>
+
+            <div id="humidity" class="animated fadeIn ng-scope" style="width: 29%;" ng-if="summary.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%;font-family: 'Andika', sans-serif"><b>Humidity</b></p>
+              <img src="https://weather-io.herokuapp.com/wind.svg" style="width:120px;height:120px;" class="animated fadeIn ng-scope" ng-if="iconi=='clear-night'">
+              
+                <p class="animated fadeIn" style="font-size: 85%;">{{humidity}}%</p>
+            </div>
+            <div id="pressure" class="animated fadeInRight ng-scope" style="margin-right: 10%;" ng-if="humidity!=''">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%;font-family: 'Andika', sans-serif"><b>Pressure</b></p>
+                <p><b><b></p>
+                <div class="animated fadeIn"><img src="https://weather-io.herokuapp.com/humidity.svg" style="width:120px;height:120px;"></div>
+                <p class="animated fadeIn" style="font-size: 85%;">{{pressure}} mbar</p>
+            </div>
+        <div id="windspeed" style="margin-left: 10%;" class="animated fadeInLeft ng-scope" ng-if="wind!=''">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif"><b>Wind Speed</b></p>
+                <div class="animated fadeIn"><img src="https://weather-io.herokuapp.com/partly-cloudy-day.svg" style="width:120px;height:120px;"></div>
+                <p class="animated fadeIn" style="font-size: 85%;">{{wind_speed}} m/s</p>
+            </div>
+                   <p class="animated fadeIn" style="font-size: 35px;padding-left:40px; margin-top: 0px; font-family: 'Andika', sans-serif "><b>Forecast</b>
+               
+          <div id="LR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif"><b>Linear Regression</b><br></p>
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 3.05</b></p>
+               <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text1}} Inches</b></p>
+            <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt1}}</b></p>
+               
+                  
+           </div>
+          
+            <div id="MLR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Multiple Linear Regression</b><br></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Datenreihe1LinGrafikViel.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 3.02</b></p>
+               <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text2}} Inches</b></P>
+                <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt2}}</b></p>
+
+                
+           </div>
+           <div id="LR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+               <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Polynomial Regression</b><br></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Heightmass-poly-wh.svg" style="width:120px;height:120px;">
+               <p class="animated fadeIn" style="font-size: 85%;"><b>RMSE: 2.62</b></p>
+               <p class="animated fadeIn" style="font-size: 85%; "><b>{{prediction_text3}} Inches</b></P>
+                <p class="animated fadeIn" style="font-size: 85%;"><b>{{pt3}}</b></p>
+
+           </div>
+           <div id="MLR" style="margin-left : 10%; text-align:center; " class="animated fadeInLeft ng-scope" ng-if="predict.length>0">
+                <p id="predict_content" class="animated fadeIn" style="font-size: 120%; font-family: 'Andika', sans-serif "><b>Logistic Regression</b><br></p>
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" style="width:120px;height:120px;">
+                <p class="animated fadeIn" style="font-size: 85%;"><b>Accuracy: 87%</b></p>  
+              <p class="animated fadeIn" style="font-size: 85%;"><b>{{prediction_text4}}</b></p>
+           </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif;margin-top: 15%; margin-bottom: 30px; color: white; text-decoration: none;">
+    <h3>Created </h3>
+    <p style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;"> by </p>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/nadeem-choudhary-a0b091180"><u>Nadeem chaudhary</a><br></u>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/manoharj123"><u>Manohar jaiswar</a><br></u>
+    <a style="text-align: center; font-size: 23px; font-family: 'ABeeZee', sans-serif; color: white; text-decoration: none;" href="https://www.linkedin.com/in/ganesh-jha-144089115"><u>Ganesh Jha</a><br></u>
+</div>
+
+
+</body></html>
