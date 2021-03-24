@@ -9,4 +9,7 @@ It uses following algorithms to calculate predictions:
 
 The weather app is built on python flask and it is connected with API from https://openweathermap.org/api to fetch the current weather data and based on which it calculates the precipitation.
 
+Live hosted web app is here:
+https://rainfall-predictor-app.herokuapp.com/
+
 All the contributions and Suggestion are welcome!
